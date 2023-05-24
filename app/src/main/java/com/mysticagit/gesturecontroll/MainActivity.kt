@@ -10,14 +10,14 @@ import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
-    companion object {
-        lateinit var gDetector: GestureDetector
-    }
-
     private lateinit var viewTouchArea: TouchTestView
 
     interface TouchResultListener {
         fun onResult(log: String?)
+    }
+
+    companion object {
+        lateinit var gDetector: GestureDetector
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
