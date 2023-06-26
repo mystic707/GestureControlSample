@@ -1,0 +1,17 @@
+ipeline {
+    agent any
+    
+    stages() {
+        stage('git clone') {
+            steps() {
+                git 'https://github.com/mystic707/GestureControlSample.git'
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }  
+    }
+}
