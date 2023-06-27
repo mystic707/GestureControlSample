@@ -29,6 +29,15 @@ pipeline {
             steps {
                 echo 'Testing..'
             }
-        }  
+        }
+
+        stage('App build') {
+            steps {
+                ehco 'App building..'
+                script {
+                    sh "./gradlew bundle$assembleRelease"
+                }
+            }
+        }
     }
 }
