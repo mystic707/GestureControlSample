@@ -4,8 +4,9 @@ pipeline {
     stages() {
         stage('git clone') {
             steps() {
-                git 'https://github.com/mystic707/GestureControlSample.git'
-                git branch: "feature/jenkinsfile_test"
+                // git 'https://github.com/mystic707/GestureControlSample.git'
+                // git branch: "feature/jenkinsfile_test"
+                git branch: 'feature/jenkinsfile_test', url: 'https://github.com/mystic707/GestureControlSample.git'
             }
         }
         
