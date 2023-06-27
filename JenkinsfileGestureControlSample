@@ -33,7 +33,7 @@ pipeline {
 
         stage('App build') {
             steps {
-                ehco 'App building..'
+                echo 'App building..'
                 script {
                     sh "./gradlew bundle$assembleRelease"
                 }
